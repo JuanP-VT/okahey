@@ -1,0 +1,36 @@
+"use client";
+import Link from "next/link";
+import { useRef } from "react";
+import MenuButton from "./MenuButton";
+import FlameIcon from "./ui/svg/svgLibrary";
+
+function MainNav() {
+  const containerRef = useRef(null);
+  return (
+    <div className="">
+      <MenuButton containerRef={containerRef} />
+      <div //Contenedor de los links
+        ref={containerRef}
+        className="absolute top-10 z-20 flex w-full -translate-y-96 flex-col items-center justify-center 
+         gap-2 bg-black bg-opacity-95 py-3 font-semibold text-orange-100 transition sm:relative 
+         sm:top-0 sm:w-full sm:-translate-y-0  sm:flex-row sm:gap-x-10  lg:gap-x-32"
+      >
+        <FlameIcon className="hidden text-orange-500 sm:block" />
+        <Link className="whitespace-nowrap hover:text-amber-500 " href="">
+          Preguntas Frecuentes
+        </Link>
+        <Link className="hover:text-amber-500" href="">
+          Blog
+        </Link>
+        <Link className="hover:text-amber-500" href="">
+          Galería
+        </Link>
+        <Link className="hover:text-amber-500" href="">
+          Contacto
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+export default MainNav;

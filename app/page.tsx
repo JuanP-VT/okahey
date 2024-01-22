@@ -1,12 +1,15 @@
+import MainNav from "@/components/MainNav";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <div>
-      <section className="w-full  h-screen relative py-10 ">
+    <div className="relative">
+      <MainNav />
+      <section className="w-full  h-screen relative ">
         <video
           className="absolute -z-10 w-screen h-screen object-cover"
           preload="metadata"
@@ -36,6 +39,9 @@ export default function Home() {
             <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
               Descubre los números beneficios para tu salud física, mental y
               espiritual participando en la ceremonia de Temazcal
+            </p>
+            <p className="text-grey-700 text-sm bottom-0 left-8 font-bold text-primario">
+              Conoce más, visita nuestro blog!
             </p>
           </div>
           <div className="grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 p-2">
@@ -97,39 +103,42 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>{" "}
-      <section className="w-full py-12 md:py-24 lg:py-32">
+      </section>
+      <section className="w-full py-12 bg-primario">
         <div className="container px-4 md:px-6">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primario ">
             Galería
           </h2>
+          <span className="text-sm text-gray-500">
+            Click Para Ver Toda la Galería
+          </span>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-8">
             <Image
               alt="Gallery Image"
               className="aspect-square overflow-hidden rounded-md object-cover object-center"
               height="300"
-              src="/placeholder.svg"
+              src="/img/g1.jpg"
               width="300"
             />
             <Image
               alt="Gallery Image"
               className="aspect-square overflow-hidden rounded-md object-cover object-center"
               height="300"
-              src="/placeholder.svg"
+              src="/img/g2.jpg"
               width="300"
             />
             <Image
               alt="Gallery Image"
               className="aspect-square overflow-hidden rounded-md object-cover object-center"
               height="300"
-              src="/placeholder.svg"
+              src="/img/g3.jpg"
               width="300"
             />
             <Image
               alt="Gallery Image"
               className="aspect-square overflow-hidden rounded-md object-cover object-center"
               height="300"
-              src="/placeholder.svg"
+              src="/img/g4.webp"
               width="300"
             />
           </div>
@@ -213,7 +222,7 @@ export default function Home() {
             />
             <h3 className="mt-4 text-xl font-semibold">Juan Pablo</h3>
             <p className="mt-2 text-gray-500">
-              I was skeptical at first, but the temazcal proved to be a deeply
+              I was skeptical at first, but the Temazcal proved to be a deeply
               healing experience.
             </p>
           </div>
