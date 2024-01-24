@@ -1,6 +1,6 @@
 "use client";
 import AcordeónPreguntaFrecuente from "@/components/AcordeónPreguntaFrecuente";
-import { PreguntaFrecuente } from "@/types/cdnApi";
+import { PreguntaFrecuente } from "@/types/contentfulApi";
 
 type Props = {
   listaDePreguntasFrecuentes: PreguntaFrecuente[];

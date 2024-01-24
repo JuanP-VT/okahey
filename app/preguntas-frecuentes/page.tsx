@@ -1,4 +1,4 @@
-import { PreguntaFrecuente } from "@/types/cdnApi";
+import { PreguntaFrecuente } from "@/types/contentfulApi";
 import PáginaPreguntasFrecuentes from "./PáginaPreguntasFrecuentes";
 const contentful = require("contentful");
 export default async function PreguntasFrecuentes() {
