@@ -1,5 +1,3 @@
-import MainNav from "@/components/MainNav";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
 import Image from "next/image";
@@ -8,44 +6,43 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="relative">
-      <MainNav />
-      <section className="w-full  h-screen relative ">
+      <section className="relative  h-screen w-full ">
         <video
-          className="absolute -z-10 w-screen h-screen object-cover"
+          className="absolute -z-10 h-screen w-screen object-cover"
           preload="metadata"
           autoPlay={true}
           muted={true}
           loop={true}
           src="/img/video.webm"
         ></video>
-        <div className="container flex px-4 md:px-6 h-full  items-end justify-center">
-          <div className="flex flex-col items-center space-y-4 text-center mb-32">
-            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none text-primario">
+        <div className="container flex h-full items-end justify-center  px-4 md:px-6">
+          <div className="mb-32 flex flex-col items-center space-y-4 text-center">
+            <h1 className="text-primario text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none">
               Vive la magia del Temazcal
             </h1>
-            <p className="mx-auto max-w-[700px] text-slate-200 md:text-xl dark:text-slate-100">
+            <p className="mx-auto max-w-[700px] text-slate-200 dark:text-slate-100 md:text-xl">
               Únete para una experiencia única. Relájate, rejuvenece y conecta
               con la naturaleza
             </p>
           </div>
         </div>
       </section>
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-primario">
+      <section className="bg-primario w-full py-12 md:py-24 lg:py-32">
         <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
           <div className="space-y-3">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primario">
+            <h2 className="text-primario text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
               Beneficios del Temazcal
             </h2>
-            <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+            <p className="mx-auto max-w-[700px] text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Descubre los números beneficios para tu salud física, mental y
               espiritual participando en la ceremonia de Temazcal
             </p>
-            <p className="text-grey-700 text-sm bottom-0 left-8 font-bold text-primario">
+            <p className="text-grey-700 text-primario bottom-0 left-8 text-sm font-bold">
               Conoce más, visita nuestro blog!
             </p>
           </div>
-          <div className="grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 p-2">
-            <div className="flex flex-col items-center space-y-2 justify-center">
+          <div className="grid w-full grid-cols-1 gap-7 p-2 sm:grid-cols-2 md:grid-cols-3">
+            <div className="flex flex-col items-center justify-center space-y-2">
               <HeartIcon className="h-12 w-12 text-red-500" />
               <h3 className="text-lg font-semibold">
                 Promueve Funciones Cardiovasculares
@@ -55,7 +52,7 @@ export default function Home() {
                 promoviendo mejor funcionamiento cardiovascular
               </p>
             </div>
-            <div className="flex flex-col items-center space-y-2 justify-center">
+            <div className="flex flex-col items-center justify-center space-y-2">
               <LeafIcon className="h-12 w-12 text-green-500" />
               <h3 className="text-lg font-semibold">Detox Natural</h3>
               <p className="text-sm text-gray-500">
@@ -104,15 +101,15 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-full py-12 bg-primario">
+      <section className="bg-primario w-full py-12">
         <div className="container px-4 md:px-6">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primario ">
+          <h2 className="text-primario text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl ">
             Galería
           </h2>
           <span className="text-sm text-gray-500">
             Click Para Ver Toda la Galería
           </span>
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-8">
+          <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             <Image
               alt="Gallery Image"
               className="aspect-square overflow-hidden rounded-md object-cover object-center"
@@ -149,7 +146,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             Próximas Sesiones
           </h2>
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-8">
+          <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             <Card>
               <CardContent>
                 <h3 className="font-semibold">Session 1</h3>
@@ -185,11 +182,11 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="py-12 px-4 bg-gray-50">
-        <h2 className="text-2xl lg:text-3xl font-bold text-center">
+      <section className="bg-gray-50 px-4 py-12">
+        <h2 className="text-center text-2xl font-bold lg:text-3xl">
           Testimonials
         </h2>
-        <div className="mt-8 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <div className="flex flex-col items-center text-center">
             <Image
               alt="Testimonial"
@@ -246,7 +243,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <footer className="py-6 px-4 md:px-6 bg-gray-800 text-white">
+      <footer className="bg-gray-800 px-4 py-6 text-white md:px-6">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <h3 className="text-lg font-medium">Contact Us</h3>

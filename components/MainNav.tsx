@@ -7,7 +7,7 @@ import FlameIcon from "./ui/svg/svgLibrary";
 function MainNav() {
   const containerRef = useRef(null);
   return (
-    <div className="">
+    <div className="fixed z-50 w-full">
       <MenuButton containerRef={containerRef} />
       <div //Contenedor de los links
         ref={containerRef}
@@ -15,8 +15,14 @@ function MainNav() {
          gap-2 bg-black bg-opacity-95 py-3 font-semibold text-orange-100 transition sm:relative 
          sm:top-0 sm:w-full sm:-translate-y-0  sm:flex-row sm:gap-x-10  lg:gap-x-32"
       >
-        <FlameIcon className="hidden text-orange-500 sm:block" />
-        <Link className="whitespace-nowrap hover:text-amber-500 " href="">
+        <FlameIcon className="hidden text-orange-500 sm:block" />{" "}
+        <Link className="hover:text-amber-500" href="/">
+          Inicio
+        </Link>
+        <Link
+          className="whitespace-nowrap hover:text-amber-500 "
+          href="/preguntas-frecuentes"
+        >
           Preguntas Frecuentes
         </Link>
         <Link className="hover:text-amber-500" href="">
