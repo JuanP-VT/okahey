@@ -25,20 +25,20 @@ function RecuadroDeBlog({ blog }: Props) {
     opcionesDeFormato,
   );
   return (
-    <div className="flex w-full flex-col border  p-2">
+    <div className="relative flex h-96  w-full flex-col p-2">
       <Image
-        className="rounded-md"
+        className="h-52 w-96 rounded-md"
         width={300}
         height={300}
         src={`http:${imageSrc}`}
         alt="Portada del blog"
       />
       <h1 className="py-2 text-lg font-semibold">{blog.fields.titulo}</h1>
-      <div className="mb-2 text-sm text-gray-500">
+      <div className="mb-2 text-xs text-gray-500">
         <p>Creado el: {fechaDeCreación}</p>
         <p>Ultima Actualización: {fechaDeActualización}</p>
       </div>
-      <Button asChild className="w-20" variant="secondary">
+      <Button asChild className="absolute bottom-0 m-2 w-20" variant="default">
         <Link href={`/blog/${blog.sys.id}`}>Visitar</Link>
       </Button>
     </div>

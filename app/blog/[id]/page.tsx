@@ -18,7 +18,7 @@ export default async function BlogIndividual({
   const items = entry.items as Blog[];
   const find = items.find((blog) => blog.sys.id === params.id);
   if (find) {
-    return <PáginaDeBlogIndividual blog={find} />;
+    return <PáginaDeBlogIndividual blog={find} todoLosBlogs={items} />;
   }
 
   return <div>No se Encontró</div>;
