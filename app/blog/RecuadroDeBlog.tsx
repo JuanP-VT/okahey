@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Blog } from "@/types/contentfulApi";
 import Image from "next/image";
+import Link from "next/link";
 type Props = {
   blog: Blog;
 };
@@ -37,8 +38,8 @@ function RecuadroDeBlog({ blog }: Props) {
         <p>Creado el: {fechaDeCreación}</p>
         <p>Ultima Actualización: {fechaDeActualización}</p>
       </div>
-      <Button className="w-20" variant="secondary">
-        Visitar
+      <Button asChild className="w-20" variant="secondary">
+        <Link href={`/blog/${blog.sys.id}`}>Visitar</Link>
       </Button>
     </div>
   );

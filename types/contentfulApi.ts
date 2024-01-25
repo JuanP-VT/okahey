@@ -44,6 +44,7 @@ export interface Blog {
     };
   };
   sys: {
+    id: string;
     createdAt: string;
     updatedAt: string;
     contentType: {

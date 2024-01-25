@@ -25,13 +25,13 @@ function MainNav() {
         >
           Preguntas Frecuentes
         </Link>
-        <Link className="hover:text-amber-500" href="">
+        <Link className="hover:text-amber-500" href="/blog">
           Blog
         </Link>
-        <Link className="hover:text-amber-500" href="">
+        <Link className="hover:text-amber-500" href="/galeria">
           Galería
         </Link>
-        <Link className="hover:text-amber-500" href="">
+        <Link className="hover:text-amber-500" href="/contacto">
           Contacto
         </Link>
       </div>
