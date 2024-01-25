@@ -38,7 +38,11 @@ function RecuadroDeBlog({ blog }: Props) {
         <p>Creado el: {fechaDeCreación}</p>
         <p>Ultima Actualización: {fechaDeActualización}</p>
       </div>
-      <Button asChild className="absolute bottom-0 m-2 w-20" variant="default">
+      <Button
+        asChild
+        className="bottom-0 m-2 w-20 sm:absolute"
+        variant="default"
+      >
         <Link href={`/blog/${blog.sys.id}`}>Visitar</Link>
       </Button>
     </div>
