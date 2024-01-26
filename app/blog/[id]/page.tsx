@@ -1,5 +1,6 @@
 import { Blog } from "@/types/contentfulApi";
 import PáginaDeBlogIndividual from "./PáginaDeBlogIndividual";
+import PáginaNoEncontrada from "@/components/página-no-encontrada/PáginaNoEncontrada";
 
 export default async function BlogIndividual({
   params,
@@ -21,5 +22,5 @@ export default async function BlogIndividual({
     return <PáginaDeBlogIndividual blog={find} todoLosBlogs={items} />;
   }
 
-  return <div>No se Encontró</div>;
+  return <PáginaNoEncontrada />;
 }
