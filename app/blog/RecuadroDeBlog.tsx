@@ -27,13 +27,15 @@ function RecuadroDeBlog({ blog }: Props) {
   return (
     <div className="relative flex h-96  w-full flex-col p-2">
       <Image
-        className="h-52 w-96 rounded-md"
+        className=" h-52 w-96 rounded-md"
         width={300}
         height={300}
         src={`http:${imageSrc}`}
         alt="Portada del blog"
       />
-      <h1 className="py-2 text-lg font-semibold">{blog.fields.titulo}</h1>
+      <h1 className="max-w-96 py-2 text-lg font-semibold">
+        {blog.fields.titulo}
+      </h1>
       <div className="mb-2 text-xs text-gray-500">
         <p>Creado el: {fechaDeCreación}</p>
         <p>Ultima Actualización: {fechaDeActualización}</p>
