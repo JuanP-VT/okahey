@@ -54,3 +54,20 @@ export interface Blog {
     };
   };
 }
+
+export interface Foto {
+  fields: {
+    file: {
+      contentType: string;
+      fileName: string;
+      url: string;
+      details: {
+        size: number;
+        image: {
+          width: number;
+          height: number;
+        };
+      };
+    };
+  };
+}
