@@ -71,3 +71,10 @@ export interface Foto {
     };
   };
 }
+
+export interface Sesiones {
+  sesion1: string;
+  sesion2: string;
+  sesion3: string;
+  sesion4: string;
+}

@@ -1,21 +1,30 @@
 import * as contentful from "contentful";
-import { Card, CardContent } from "@/components/ui/card";
-
 import Image from "next/image";
-import { Foto } from "@/types/contentfulApi";
+import { Foto, Sesiones } from "@/types/contentfulApi";
 import GaleríaDeInicio from "@/components/inicio/GaleríaDeInicio";
+import PróximasSesiones from "@/components/inicio/PróximasSesiones";
 
 export default async function Home() {
   const client = contentful.createClient({
     space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
     accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
   });
-  const entry = await client.getEntries({
+  const solicitarFotos = await client.getEntries({
     content_type: "galeria",
     "sys.id": process.env.NEXT_PUBLIC_CONTENTFUL_GALERÍA_CONTENT_ID,
   });
-  const fotos = entry.items[0].fields.fotos as Foto[];
+  const fotos = solicitarFotos.items[0].fields.fotos as Foto[];
 
+  const solicitarPróximasSesiones = await client.getEntries({
+    content_type: "prximasSesiones",
+  });
+
+  const sesiones = solicitarPróximasSesiones.items[0].fields as {
+    sesion1: string;
+    sesion2: string;
+    sesion3: string;
+    sesion4: string;
+  };
   return (
     <div className="relative">
       <section className="relative  h-screen w-full ">
@@ -114,47 +123,7 @@ export default async function Home() {
         </div>
       </section>
       <GaleríaDeInicio fotos={fotos} />
-      <section className="w-full py-12 md:py-24 lg:py-32">
-        <div className="container px-4 md:px-6">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Próximas Sesiones
-          </h2>
-          <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            <Card>
-              <CardContent>
-                <h3 className="font-semibold">Session 1</h3>
-                <p>Date: 22nd January, 2024</p>
-                <p>Time: 6:00 PM</p>
-                <p>Status: Available</p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent>
-                <h3 className="font-semibold">Session 2</h3>
-                <p>Date: 29th January, 2024</p>
-                <p>Time: 6:00 PM</p>
-                <p>Status: Available</p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent>
-                <h3 className="font-semibold">Session 3</h3>
-                <p>Date: 5th February, 2024</p>
-                <p>Time: 6:00 PM</p>
-                <p>Status: Available</p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent>
-                <h3 className="font-semibold">Session 4</h3>
-                <p>Date: 12th February, 2024</p>
-                <p>Time: 6:00 PM</p>
-                <p>Status: Available</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+      <PróximasSesiones sesiones={sesiones} />
       <section className="bg-gray-50 px-4 py-12">
         <h2 className="text-center text-2xl font-bold lg:text-3xl">
           Testimonials
