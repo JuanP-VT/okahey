@@ -1,10 +1,21 @@
-import FooterPrincipal from "@/components/FooterPrincipal";
+import * as contentful from "contentful";
 import { Card, CardContent } from "@/components/ui/card";
 
 import Image from "next/image";
-import Link from "next/link";
+import { Foto } from "@/types/contentfulApi";
+import GaleríaDeInicio from "@/components/inicio/GaleríaDeInicio";
 
-export default function Home() {
+export default async function Home() {
+  const client = contentful.createClient({
+    space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
+    accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
+  });
+  const entry = await client.getEntries({
+    content_type: "galeria",
+    "sys.id": process.env.NEXT_PUBLIC_CONTENTFUL_GALERÍA_CONTENT_ID,
+  });
+  const fotos = entry.items[0].fields.fotos as Foto[];
+
   return (
     <div className="relative">
       <section className="relative  h-screen w-full ">
@@ -102,46 +113,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-primario w-full py-12">
-        <div className="container px-4 md:px-6">
-          <h2 className="text-primario text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl ">
-            Galería
-          </h2>
-          <span className="text-sm text-gray-500">
-            Click Para Ver Toda la Galería
-          </span>
-          <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            <Image
-              alt="Gallery Image"
-              className="aspect-square overflow-hidden rounded-md object-cover object-center"
-              height="300"
-              src="/img/g1.jpg"
-              width="300"
-            />
-            <Image
-              alt="Gallery Image"
-              className="aspect-square overflow-hidden rounded-md object-cover object-center"
-              height="300"
-              src="/img/g2.jpg"
-              width="300"
-            />
-            <Image
-              alt="Gallery Image"
-              className="aspect-square overflow-hidden rounded-md object-cover object-center"
-              height="300"
-              src="/img/g3.jpg"
-              width="300"
-            />
-            <Image
-              alt="Gallery Image"
-              className="aspect-square overflow-hidden rounded-md object-cover object-center"
-              height="300"
-              src="/img/g4.webp"
-              width="300"
-            />
-          </div>
-        </div>
-      </section>
+      <GaleríaDeInicio fotos={fotos} />
       <section className="w-full py-12 md:py-24 lg:py-32">
         <div className="container px-4 md:px-6">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
