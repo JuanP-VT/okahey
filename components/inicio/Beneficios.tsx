@@ -1,18 +1,23 @@
+import Link from "next/link";
+
 export default function Beneficios() {
   return (
     <section className="bg-primario w-full py-12 md:py-24 lg:py-32">
       <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
         <div className="space-y-3">
-          <h2 className="text-primario text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+          <h2 className="text-primario mb-3 text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
             Beneficios del Temazcal
           </h2>
           <p className="mx-auto max-w-[700px] text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
             Descubre los números beneficios para tu salud física, mental y
             espiritual participando en la ceremonia de Temazcal
           </p>
-          <p className="text-grey-700 text-primario bottom-0 left-8 text-sm font-bold">
+          <Link
+            href="/blog"
+            className="text-grey-700 text-primario bottom-0 left-8 text-sm font-bold"
+          >
             Conoce más, visita nuestro blog!
-          </p>
+          </Link>
         </div>
         <div className="grid w-full grid-cols-1 gap-7 p-2 sm:grid-cols-2 md:grid-cols-3">
           <div className="flex flex-col items-center justify-center space-y-2">
@@ -62,7 +67,7 @@ export default function Beneficios() {
             </p>
           </div>
           <div className="flex flex-col items-center space-y-2">
-            <FeatherIcon className="h-12 w-12 text-indigo-500" />
+            <FeatherIcon className="h-12 w-12 text-slate-300" />
             <h3 className="text-lg font-semibold">
               Fomenta el Crecimiento Espiritual
             </h3>

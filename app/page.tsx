@@ -1,6 +1,6 @@
 import * as contentful from "contentful";
 import Image from "next/image";
-import { Foto, Sesiones } from "@/types/contentfulApi";
+import { Foto } from "@/types/contentfulApi";
 import GaleríaDeInicio from "@/components/inicio/GaleríaDeInicio";
 import PróximasSesiones from "@/components/inicio/PróximasSesiones";
 import Beneficios from "@/components/inicio/Beneficios";
@@ -39,7 +39,7 @@ export default async function Home() {
         ></video>
         <div className="container flex h-full items-end justify-center  px-4 md:px-6">
           <div className="mb-32 flex flex-col items-center space-y-4 text-center">
-            <h1 className="text-primario text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none">
+            <h1 className="text-primario text-4xl font-bold tracking-tighter sm:text-5xl md:text-7xl lg:text-8xl ">
               Vive la magia del Temazcal
             </h1>
             <p className="mx-auto max-w-[700px] text-slate-200 dark:text-slate-100 md:text-xl">

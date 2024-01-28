@@ -40,7 +40,7 @@ function PróximasSesiones({ sesiones }: Props) {
               hour12: true,
             });
             return (
-              <Card className="p-2 py-4" key={`sesion${index}`}>
+              <Card className="bg-zinc-200 p-2 py-4" key={`sesion${index}`}>
                 <CardContent>
                   <h3 className="font-semibold">Session {index + 1}</h3>
                   <p>Día: {fechaDía}</p>

@@ -3,14 +3,30 @@ import Link from "next/link";
 export default function FooterPrincipal() {
   return (
     <footer className="bg-gray-800 px-4 py-6 text-white md:px-6">
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-        <div>
-          <h3 className="text-lg font-medium">Contáctanos</h3>
-          <p className="mt-2">81379 Ejido Plan de Guadalupe, Sinaloa México</p>
-          <p className="mt-1">(+52) 668 232 4356</p>
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <div className="flex flex-col">
+          <h3 className="text-primario text-lg font-bold">
+            Contáctanos <span className="text-xs">(Da Click)</span>
+          </h3>
+          <Link
+            href="https://maps.app.goo.gl/jinyVDshRqii5djR8"
+            className="mt-2    hover:font-bold"
+            target="_blank"
+          >
+            81379 Ejido Plan de Guadalupe, Sinaloa México
+          </Link>
+          <Link
+            href="https://wa.me/6682324356"
+            className="mt-2 hover:font-bold"
+            target="_blank"
+          >
+            (+52) 668 232 4356
+          </Link>
         </div>
         <div>
-          <h3 className="text-lg font-medium">Síguenos</h3>
+          <h3 className="text-primario text-lg   font-medium">
+            Síguenos en redes
+          </h3>
           <div className="mt-2 flex space-x-6">
             <Link
               className="text-gray-400 hover:text-gray-300"
