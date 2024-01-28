@@ -10,14 +10,14 @@ export default function FooterPrincipal() {
           </h3>
           <Link
             href="https://maps.app.goo.gl/jinyVDshRqii5djR8"
-            className="mt-2    hover:font-bold"
+            className="mt-2 font-semibold  hover:text-orange-300"
             target="_blank"
           >
             81379 Ejido Plan de Guadalupe, Sinaloa México
           </Link>
           <Link
             href="https://wa.me/6682324356"
-            className="mt-2 hover:font-bold"
+            className="mt-2 font-semibold hover:text-orange-300"
             target="_blank"
           >
             (+52) 668 232 4356
