@@ -52,7 +52,7 @@ function PáginaDeBlogIndividual({ blog, todoLosBlogs }: Props) {
   return (
     <div className="flex h-full w-full flex-col  bg-slate-100 p-2">
       <div className="mt-16 flex flex-col items-center justify-start self-center rounded-md bg-white px-3 md:w-3/4 lg:w-1/2">
-        <div className="flex">
+        <div className="flex flex-col sm:flex-row">
           <h1 className="p-3 text-3xl font-semibold md:px-5 md:py-7 md:text-5xl">
             {blog.fields.titulo}
           </h1>
