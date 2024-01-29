@@ -13,7 +13,7 @@ export default async function Home() {
   });
   const solicitarFotos = await client.getEntries({
     content_type: "galeria",
-    "sys.id": process.env.NEXT_PUBLIC_CONTENTFUL_GALERÍA_CONTENT_ID,
+    "sys.id": process.env.NEXT_PUBLIC_CONTENTFUL_GALERIA_CONTENT_ID,
   });
   const fotos = solicitarFotos.items[0].fields.fotos as Foto[];
 

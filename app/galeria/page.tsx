@@ -8,9 +8,8 @@ export default async function Galería() {
   });
   const entry = await client.getEntries({
     content_type: "galeria",
-    "sys.id": process.env.NEXT_PUBLIC_CONTENTFUL_GALERÍA_CONTENT_ID,
+    "sys.id": process.env.NEXT_PUBLIC_CONTENTFUL_GALERIA_CONTENT_ID,
   });
-
   const fotos = entry.items[0].fields.fotos as Foto[];
   return <Pagina fotos={fotos} />;
 }
