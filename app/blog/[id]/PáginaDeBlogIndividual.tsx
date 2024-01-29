@@ -52,9 +52,18 @@ function PáginaDeBlogIndividual({ blog, todoLosBlogs }: Props) {
   return (
     <div className="flex h-full w-full flex-col  bg-slate-100 p-2">
       <div className="mt-16 flex flex-col items-center justify-start self-center rounded-md bg-white px-3 md:w-3/4 lg:w-1/2">
-        <h1 className="py-3 text-3xl font-semibold md:px-5 md:py-7 md:text-5xl">
-          {blog.fields.titulo}
-        </h1>
+        <div className="flex">
+          <h1 className="p-3 text-3xl font-semibold md:px-5 md:py-7 md:text-5xl">
+            {blog.fields.titulo}
+          </h1>
+          <Image
+            src={`https:${blog.fields.fotoDePortada.fields.file.url}`}
+            height={300}
+            width={300}
+            alt="Portada del blog"
+            className="rounded-xl p-2"
+          />
+        </div>
         <div>
           {blog.fields.contenido.content.map((contenido, index) => (
             <div className="py-4" key={`doc${index}`}>

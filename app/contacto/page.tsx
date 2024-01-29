@@ -26,7 +26,7 @@ export default function Page() {
               <div className="text-lg font-semibold">Dirección:</div>
               <Link
                 href="https://maps.app.goo.gl/jinyVDshRqii5djR8"
-                className="white mt-2 "
+                className="white mt-2 font-semibold hover:text-orange-500"
                 target="_blank"
               >
                 81379 Ejido Plan de Guadalupe, Sinaloa México
@@ -34,7 +34,7 @@ export default function Page() {
               <div className="mt-2 text-lg font-semibold">Contacto:</div>
               <Link
                 href="https://wa.me/6682324356"
-                className="mt-2 "
+                className="mt-2 font-semibold hover:text-orange-500 "
                 target="_blank"
               >
                 (+52) 668 232 4356
