@@ -1,6 +1,9 @@
 "use client";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import { FloatingWhatsApp } from "react-floating-whatsapp";
+import WhatsApp from "@/components/WhatsApp";
+
 export default function Page() {
   /**
    * Es importante importar el mapa de esta manera, de lo contrario leaflet intentará acceder al objecto "windows"
@@ -72,6 +75,7 @@ export default function Page() {
           </div>
         </div>
       </div>
+      <WhatsApp />
     </section>
   );
 }

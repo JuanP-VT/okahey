@@ -4,6 +4,7 @@ import { Foto } from "@/types/contentfulApi";
 import GaleríaDeInicio from "@/components/inicio/GaleríaDeInicio";
 import PróximasSesiones from "@/components/inicio/PróximasSesiones";
 import Beneficios from "@/components/inicio/Beneficios";
+import WhatsApp from "@/components/WhatsApp";
 
 export default async function Home() {
   const client = contentful.createClient({
@@ -105,7 +106,7 @@ export default async function Home() {
               }}
               width="100"
             />
-            <h3 className="mt-4 text-xl font-semibold">Maria Rodriguez</h3>
+            <h3 className="mt-4 text-xl font-semibold">María Rodríguez</h3>
             <p className="mt-2 text-gray-500">
               Es algo que debes intentar al menos una vez en tu vida!. Es como
               un sauna pero más poderoso
@@ -113,6 +114,7 @@ export default async function Home() {
           </div>
         </div>
       </section>
+      <WhatsApp />
     </div>
   );
 }
